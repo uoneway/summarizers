@@ -113,6 +113,7 @@ class Summarizers(object):
         if len(prompt) > 0:
             decoder_input_ids = self.tokenizer(
                 prompt,
+                truncation=True,
                 return_tensors="pt",
             )["input_ids"][:, :-1].to(self.device)
             # remove eos token
@@ -122,6 +123,7 @@ class Summarizers(object):
 
         tokenized = self.tokenizer(
             contents,
+            truncation=True,
             return_tensors="pt",
         )
 
