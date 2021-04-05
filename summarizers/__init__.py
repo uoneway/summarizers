@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from summarizers.summarizers import Summarizers
+from .summarizers import Summarizers
 
 __all__ = [Summarizers]
